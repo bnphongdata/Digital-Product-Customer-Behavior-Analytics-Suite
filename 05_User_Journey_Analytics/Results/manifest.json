@@ -1,0 +1,40 @@
+{
+  "check_count": 15,
+  "code": {
+    "05_User_Journey_Analytics/SQL/analysis.sql": "041d0634c744a95df7f14eab2d45c1008f3f4a16d071b3ae3127e415758f19c2",
+    "portfolio/__init__.py": "4ca7e47e5fe8508d1e1000e51607cab8f025d7cb77fd79b3aa51d1614c327971",
+    "portfolio/contracts.py": "3b3c6b24709794887540e9c1621efef2880794446a3a3c11a7fa2d3046f0a020",
+    "portfolio/metrics.py": "e8727b7ec36b31713ee935420e018fe7e59e2734bd36ad7cd6d2c53377be1dd8",
+    "portfolio/quality.py": "8de3ac6d703d234fb982f439e05a60fb9b2b386e4824ed833d51f0384b0e0661",
+    "portfolio/run.py": "e80aaf120243dc0729d7bff01a453a16d0dab9797a9bc01bcf6b9c2beb947606",
+    "requirements.txt": "62d48d32dd5feaa173e323a301f6b0d8a965e9b9ec653e1dc5be58f6a222eb69"
+  },
+  "data_kind": "supplied simulated data",
+  "outputs": {
+    "05_User_Journey_Analytics/Data/clean/journey_events_clean.csv": "dfc82baeb044c350c4480a1d2bd9a22efcfba71812fdd14f3394caafe97b73b4",
+    "05_User_Journey_Analytics/Data/clean/users_clean.csv": "67c74dd0157e035d66e3aba01ba67cf1e0efc60737a2dfa5c8b6c7a367a84212",
+    "05_User_Journey_Analytics/README.md": "693539918072119c482cc0ceae2c71783e1515561231fc71c005c409e2372c27",
+    "05_User_Journey_Analytics/REPORT.html": "b3c3a3099168f0562fcfc255ca93a4a829bbdcaa868886445db14e140771848b",
+    "05_User_Journey_Analytics/Results/additional_metrics.json": "315e80d3b203b897e40c75de608785796617219cf7b52a15e884ba7de9ae5f50",
+    "05_User_Journey_Analytics/Results/ordered_funnel.csv": "c7d19eba8e5a17ff3e65b5fe58ccb4db26385bcc140a330bac6837b4aea796c5",
+    "05_User_Journey_Analytics/Results/quality.json": "41135c5394a0dce0467f49f0d35bcf8d31e381cc546dbfa0429f1b5f30880a74",
+    "05_User_Journey_Analytics/Results/query_plans.json": "46ee62eaf87e4fa4562abbbe4480e1b5dd4f9ca35161a775b62a057e8157a084",
+    "05_User_Journey_Analytics/Results/returning_user_conversion.csv": "3480d027368221d911e8d3014e8a42580ef580ce9fe9d26234c133f51b81cda1",
+    "05_User_Journey_Analytics/Results/stage_reach.csv": "da7605ae1afbcbb6e62cc3b257975a19c6a32639a1d6765a95faae022d29a2b9",
+    "05_User_Journey_Analytics/Results/summary.csv": "f83d2b4d49e15b1d42618f10a863d877ad3d43d44be8c70b3ddb8b2a5197576a",
+    "05_User_Journey_Analytics/Results/time_to_purchase.csv": "19625f44e0bd1fc3d9da868f059298cad055c7289fc694c79e389f4fc04daee5",
+    "05_User_Journey_Analytics/Results/validation.json": "1be84ab2ac280f6abbed6b4b52aaaeaca5388532b8e979f8cdedef271f60aa6d"
+  },
+  "project": "05_User_Journey_Analytics",
+  "software": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "python": "3.14.6",
+    "scipy": "1.18.1",
+    "sqlite": "3.50.4"
+  },
+  "sources": {
+    "05_User_Journey_Analytics/Data/raw/journey_events_raw.csv": "6410d5cd4a277fc51eb5d13a5e5b53f376d99467cc652fbcf1d2037f70a0b681",
+    "05_User_Journey_Analytics/Data/raw/users_raw.csv": "617f4b105245b33b7f055f569f57476208e40a5d8388d0409d5dfce8be25d956"
+  }
+}

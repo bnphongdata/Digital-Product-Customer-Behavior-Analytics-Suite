@@ -1,0 +1,39 @@
+{
+  "check_count": 19,
+  "code": {
+    "04_Amazon_Marketplace_Analytics/SQL/analysis.sql": "5a8b751f0f8996273c241be47c601173b992605d14efba73c5ee8d855780ae04",
+    "portfolio/__init__.py": "4ca7e47e5fe8508d1e1000e51607cab8f025d7cb77fd79b3aa51d1614c327971",
+    "portfolio/contracts.py": "3b3c6b24709794887540e9c1621efef2880794446a3a3c11a7fa2d3046f0a020",
+    "portfolio/metrics.py": "e8727b7ec36b31713ee935420e018fe7e59e2734bd36ad7cd6d2c53377be1dd8",
+    "portfolio/quality.py": "8de3ac6d703d234fb982f439e05a60fb9b2b386e4824ed833d51f0384b0e0661",
+    "portfolio/run.py": "e80aaf120243dc0729d7bff01a453a16d0dab9797a9bc01bcf6b9c2beb947606",
+    "requirements.txt": "62d48d32dd5feaa173e323a301f6b0d8a965e9b9ec653e1dc5be58f6a222eb69"
+  },
+  "data_kind": "supplied simulated data",
+  "outputs": {
+    "04_Amazon_Marketplace_Analytics/Data/clean/listings_clean.csv": "47048e09ecf49ca66c6564de7cfd0a2a7f5e637beaa88c07b4bb916bfb17e049",
+    "04_Amazon_Marketplace_Analytics/Data/clean/sales_clean.csv": "4f06ae2b258f4256407507f3361fbaaa3b611f9f86470db54efbb41116e74437",
+    "04_Amazon_Marketplace_Analytics/README.md": "fee81eb24ec6aa61bce9682c7a13ff894ba1637e68ebd8aa2739425e12d4a3ad",
+    "04_Amazon_Marketplace_Analytics/REPORT.html": "6f34dbaf2e8c7bb990b743d1d01dc63d0a6d72b94629107b31f3389196a99132",
+    "04_Amazon_Marketplace_Analytics/Results/additional_metrics.json": "ac400e4f7a48ed70a927a93a0087d219feac20cec2c2421b1e283414b9ad4475",
+    "04_Amazon_Marketplace_Analytics/Results/category_performance.csv": "a24c2482d44abbfba4c134120212360b9c5f561369368699a021cd1f9d1678f3",
+    "04_Amazon_Marketplace_Analytics/Results/quality.json": "db7a314144f3388b63acf15296125b0ce8e8b292dd21c6e308bdcfaab4d48f88",
+    "04_Amazon_Marketplace_Analytics/Results/query_plans.json": "13c221395fa67c6d0ba6f512a84483c6ee65cfb06cf2bdd1b84f1a7077dcbaf0",
+    "04_Amazon_Marketplace_Analytics/Results/seller_concentration.csv": "b2ba1372a11f86b017cf92ee020cab2ccfdffe6677f1867be010bf7bfc8e89ea",
+    "04_Amazon_Marketplace_Analytics/Results/stock_status_association.csv": "98f63db95b2e8530494cc9be507e2bb68a5bda3caff100f4b6b4e1edfa1dbbf2",
+    "04_Amazon_Marketplace_Analytics/Results/summary.csv": "c194bc6516270e37f1d5749af0a5548a3523feef452478d04987b2249c5e1c1c",
+    "04_Amazon_Marketplace_Analytics/Results/validation.json": "0f8a352491927e3ff906f1bce3fbe3f060870849e09a733e36f3c363c4f40a82"
+  },
+  "project": "04_Amazon_Marketplace_Analytics",
+  "software": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "python": "3.14.6",
+    "scipy": "1.18.1",
+    "sqlite": "3.50.4"
+  },
+  "sources": {
+    "04_Amazon_Marketplace_Analytics/Data/raw/listings_raw.csv": "beafd0fe2675979b8c0c6311bb6929fec68057007ab393240f7655b9502f1d79",
+    "04_Amazon_Marketplace_Analytics/Data/raw/sales_raw.csv": "9dfb2244ada1ceb81cb91a8a5840c3ae7d6b2ba45b88f6b25f80d82718a7a6b6"
+  }
+}

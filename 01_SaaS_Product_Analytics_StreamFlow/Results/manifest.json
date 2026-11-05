@@ -1,0 +1,41 @@
+{
+  "check_count": 19,
+  "code": {
+    "01_SaaS_Product_Analytics_StreamFlow/SQL/analysis.sql": "a0520baaca2780cd8c8b05b3c0b413d4f7b6aa4114f8a9af08f42e3892799c13",
+    "portfolio/__init__.py": "4ca7e47e5fe8508d1e1000e51607cab8f025d7cb77fd79b3aa51d1614c327971",
+    "portfolio/contracts.py": "3b3c6b24709794887540e9c1621efef2880794446a3a3c11a7fa2d3046f0a020",
+    "portfolio/metrics.py": "e8727b7ec36b31713ee935420e018fe7e59e2734bd36ad7cd6d2c53377be1dd8",
+    "portfolio/quality.py": "8de3ac6d703d234fb982f439e05a60fb9b2b386e4824ed833d51f0384b0e0661",
+    "portfolio/run.py": "e80aaf120243dc0729d7bff01a453a16d0dab9797a9bc01bcf6b9c2beb947606",
+    "requirements.txt": "62d48d32dd5feaa173e323a301f6b0d8a965e9b9ec653e1dc5be58f6a222eb69"
+  },
+  "data_kind": "supplied simulated data",
+  "outputs": {
+    "01_SaaS_Product_Analytics_StreamFlow/Data/clean/events_clean.csv": "45267085e722708547c151dc8d41f742620433991efa2bdf246f098ad68602a2",
+    "01_SaaS_Product_Analytics_StreamFlow/Data/clean/subscriptions_clean.csv": "22f4ed2bbe0878853e3dd73c490c7a66ce2daa11efb761f471888d28f86fef20",
+    "01_SaaS_Product_Analytics_StreamFlow/Data/clean/users_clean.csv": "c8de56188e25a6516e4267533311575c11f83f86217c2f9919c337f99f28d699",
+    "01_SaaS_Product_Analytics_StreamFlow/README.md": "e6d28487eaf22ff56da6e6f89889db84b13fd0f517aa2a97d4992397f7a7f6bd",
+    "01_SaaS_Product_Analytics_StreamFlow/REPORT.html": "1d003b01f411b1dcf26a7e20592867706b23ca06ae06d488384d2dc231388997",
+    "01_SaaS_Product_Analytics_StreamFlow/Results/additional_metrics.json": "56674505647256c4919204138f77ebf92a0f9a08ceddc4c9500298f7db5b9aa1",
+    "01_SaaS_Product_Analytics_StreamFlow/Results/onboarding_funnel.csv": "86e4d62448ae6c761c6d720da62797058ac79c3aa9567070dc941b657ae2916b",
+    "01_SaaS_Product_Analytics_StreamFlow/Results/power_user_association.csv": "0fcb113583d7408dfe77a7e55dc830f21267c30ef39d85aafe4a8db76b46082c",
+    "01_SaaS_Product_Analytics_StreamFlow/Results/quality.json": "9f972cf56e3b881c2ccd068656745a7a0c23f68cb40c2712f57c93d53d930406",
+    "01_SaaS_Product_Analytics_StreamFlow/Results/query_plans.json": "df34a4376649e23509df2c0918aaab7e4a89a7989379ec1761d0be038e7b69a3",
+    "01_SaaS_Product_Analytics_StreamFlow/Results/revenue_by_tier.csv": "39411b79a8bed9df77d149606edf893cc9b42600cff1834923906ec0e791e10c",
+    "01_SaaS_Product_Analytics_StreamFlow/Results/summary.csv": "d2a37d3e187da19d20b2fffc9d48e5f97325635b72bf3363e8185b72ac525140",
+    "01_SaaS_Product_Analytics_StreamFlow/Results/validation.json": "26be5f57518ff59aa682aaa1b5a32b2cd8f40599516ee6add69c2b564568947f"
+  },
+  "project": "01_SaaS_Product_Analytics_StreamFlow",
+  "software": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "python": "3.14.6",
+    "scipy": "1.18.1",
+    "sqlite": "3.50.4"
+  },
+  "sources": {
+    "01_SaaS_Product_Analytics_StreamFlow/Data/raw/events_raw.csv": "b849abce4339950e38daecaf5f44c9a4694e5e45038126a0cc4d7a9de79aa333",
+    "01_SaaS_Product_Analytics_StreamFlow/Data/raw/subscriptions_raw.csv": "973c805e7ffc90a07dd64846c17f1a697e2782bddc23cf8ba8b4ca2617efea3a",
+    "01_SaaS_Product_Analytics_StreamFlow/Data/raw/users_raw.csv": "5ca6d5b172af0d774ce5c296590f1a3e548648106603c5a6cc6846642e0733fc"
+  }
+}

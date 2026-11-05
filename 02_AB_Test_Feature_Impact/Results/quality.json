@@ -1,0 +1,21 @@
+{
+  "semantic_issues": [
+    {
+      "affected_rows": 12000,
+      "interpretation": "Kh\u00f4ng c\u00f3 user_id ho\u1eb7c nh\u1eadt k\u00fd ph\u00e2n b\u1ed5. T\u00ednh \u0111\u1ed9c l\u1eadp c\u1ee7a phi\u00ean v\u00e0 t\u1ef7 l\u1ec7 50:50 l\u00e0 c\u00e1c gi\u1ea3 \u0111\u1ecbnh; k\u1ebft lu\u1eadn suy di\u1ec5n mang t\u00ednh t\u1ea1m th\u1eddi.",
+      "issue": "unknown_randomization_unit"
+    }
+  ],
+  "tables": {
+    "ab_sessions": {
+      "clean_sha256": "255c4e21f36e895271785a5e372b874b6cd96052c40403a3ad3c62ea8aa9fd71",
+      "duplicate_policy": "Kh\u00f3a ch\u00ednh b\u1ecb tr\u00f9ng s\u1ebd b\u00e1o l\u1ed7i ngay; c\u00e1c s\u1ef1 ki\u1ec7n l\u1eb7p l\u1ea1i kh\u00f4ng c\u00f3 m\u00e3 \u0111\u1ecbnh danh s\u1ef1 ki\u1ec7n c\u1ed1 \u0111\u1ecbnh \u0111\u01b0\u1ee3c gi\u1eef nguy\u00ean.",
+      "exact_repeat_rows": 0,
+      "input_rows": 12000,
+      "null_cells": 0,
+      "output_rows": 12000,
+      "primary_key": "session_id",
+      "source_sha256": "8ecd8c08437426aab53e90bc7b46ae7803e2fd155d4dc390c584f46fa03b83fc"
+    }
+  }
+}

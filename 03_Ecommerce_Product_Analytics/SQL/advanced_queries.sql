@@ -1,0 +1,5 @@
+-- Toàn bộ các phân tích nâng cao chạy trên SQLite 3.25+ đã được tổng hợp trong tệp analysis.sql.
+-- Bao gồm CTE, hàm xếp hạng/cửa sổ (window functions), phễu tuần tự và phân tích phân khúc.
+-- Chạy toàn bộ phân tích bằng lệnh:
+-- python -m portfolio.run
+-- Xem kết quả đầu ra trong thư mục Results/*.csv.

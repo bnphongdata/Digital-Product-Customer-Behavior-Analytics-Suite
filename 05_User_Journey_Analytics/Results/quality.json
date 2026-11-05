@@ -1,0 +1,36 @@
+{
+  "semantic_issues": [
+    {
+      "affected_rows": 0,
+      "interpretation": "Gi\u1eef l\u1ea1i trong ngu\u1ed3n; ph\u1ec5u tu\u1ea7n t\u1ef1 v\u00e0 th\u1eddi gian \u0111\u1ebfn l\u00fac mua h\u00e0ng \u0111\u00e3 lo\u1ea1i b\u1ecf chu\u1ed7i th\u1eddi gian kh\u00f4ng h\u1ee3p l\u1ec7.",
+      "issue": "events_before_first_seen"
+    },
+    {
+      "affected_rows": 3296,
+      "interpretation": "C\u00f3 \u00edt nh\u1ea5t m\u1ed9t b\u01b0\u1edbc sau di\u1ec5n ra tr\u01b0\u1edbc b\u01b0\u1edbc tr\u01b0\u1edbc \u0111\u00f3. Kh\u00f4ng coi s\u1ef1 s\u1ee5t gi\u1ea3m ph\u1ec5u nghi\u00eam ng\u1eb7t l\u00e0 kh\u00e1ch h\u00e0ng b\u1ecf cu\u1ed9c; c\u1ea7n ki\u1ec3m tra l\u1ea1i c\u01a1 ch\u1ebf ghi nh\u1eadn th\u1eddi gian.",
+      "issue": "users_with_adjacent_stage_date_inversions"
+    }
+  ],
+  "tables": {
+    "journey_events": {
+      "clean_sha256": "dfc82baeb044c350c4480a1d2bd9a22efcfba71812fdd14f3394caafe97b73b4",
+      "duplicate_policy": "Kh\u00f3a ch\u00ednh b\u1ecb tr\u00f9ng s\u1ebd b\u00e1o l\u1ed7i ngay; c\u00e1c s\u1ef1 ki\u1ec7n l\u1eb7p l\u1ea1i kh\u00f4ng c\u00f3 m\u00e3 \u0111\u1ecbnh danh s\u1ef1 ki\u1ec7n c\u1ed1 \u0111\u1ecbnh \u0111\u01b0\u1ee3c gi\u1eef nguy\u00ean.",
+      "exact_repeat_rows": 0,
+      "input_rows": 17354,
+      "null_cells": 0,
+      "output_rows": 17354,
+      "primary_key": null,
+      "source_sha256": "6410d5cd4a277fc51eb5d13a5e5b53f376d99467cc652fbcf1d2037f70a0b681"
+    },
+    "users": {
+      "clean_sha256": "67c74dd0157e035d66e3aba01ba67cf1e0efc60737a2dfa5c8b6c7a367a84212",
+      "duplicate_policy": "Kh\u00f3a ch\u00ednh b\u1ecb tr\u00f9ng s\u1ebd b\u00e1o l\u1ed7i ngay; c\u00e1c s\u1ef1 ki\u1ec7n l\u1eb7p l\u1ea1i kh\u00f4ng c\u00f3 m\u00e3 \u0111\u1ecbnh danh s\u1ef1 ki\u1ec7n c\u1ed1 \u0111\u1ecbnh \u0111\u01b0\u1ee3c gi\u1eef nguy\u00ean.",
+      "exact_repeat_rows": 0,
+      "input_rows": 6000,
+      "null_cells": 0,
+      "output_rows": 6000,
+      "primary_key": "user_id",
+      "source_sha256": "617f4b105245b33b7f055f569f57476208e40a5d8388d0409d5dfce8be25d956"
+    }
+  }
+}

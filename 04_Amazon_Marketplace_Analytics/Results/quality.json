@@ -1,0 +1,36 @@
+{
+  "semantic_issues": [
+    {
+      "affected_rows": 9019,
+      "interpretation": "S\u1eed d\u1ee5ng doanh thu ghi nh\u1eadn theo ngu\u1ed3n. Chi\u1ebft kh\u1ea5u, ph\u00ed, thu\u1ebf v\u00e0 quy t\u1eafc t\u1ea1o d\u1eef li\u1ec7u ch\u01b0a r\u00f5; kh\u00f4ng coi ch\u00eanh l\u1ec7ch n\u00e0y l\u00e0 l\u1ed7i hay doanh thu b\u1ecb m\u1ea5t.",
+      "issue": "revenue_not_price_times_units"
+    },
+    {
+      "affected_rows": 2936,
+      "interpretation": "C\u1edd t\u1ed3n kho l\u00e0 \u1ea3nh ch\u1ee5p nhanh kh\u00f4ng k\u00e8m ng\u00e0y; kh\u00f4ng ph\u1ea3n \u00e1nh ch\u00ednh x\u00e1c t\u00ecnh tr\u1ea1ng l\u00fac b\u00e1n h\u00e0ng.",
+      "issue": "sales_on_out_of_stock_listings"
+    }
+  ],
+  "tables": {
+    "listings": {
+      "clean_sha256": "47048e09ecf49ca66c6564de7cfd0a2a7f5e637beaa88c07b4bb916bfb17e049",
+      "duplicate_policy": "Kh\u00f3a ch\u00ednh b\u1ecb tr\u00f9ng s\u1ebd b\u00e1o l\u1ed7i ngay; c\u00e1c s\u1ef1 ki\u1ec7n l\u1eb7p l\u1ea1i kh\u00f4ng c\u00f3 m\u00e3 \u0111\u1ecbnh danh s\u1ef1 ki\u1ec7n c\u1ed1 \u0111\u1ecbnh \u0111\u01b0\u1ee3c gi\u1eef nguy\u00ean.",
+      "exact_repeat_rows": 0,
+      "input_rows": 1800,
+      "null_cells": 0,
+      "output_rows": 1800,
+      "primary_key": "listing_id",
+      "source_sha256": "beafd0fe2675979b8c0c6311bb6929fec68057007ab393240f7655b9502f1d79"
+    },
+    "sales": {
+      "clean_sha256": "4f06ae2b258f4256407507f3361fbaaa3b611f9f86470db54efbb41116e74437",
+      "duplicate_policy": "Kh\u00f3a ch\u00ednh b\u1ecb tr\u00f9ng s\u1ebd b\u00e1o l\u1ed7i ngay; c\u00e1c s\u1ef1 ki\u1ec7n l\u1eb7p l\u1ea1i kh\u00f4ng c\u00f3 m\u00e3 \u0111\u1ecbnh danh s\u1ef1 ki\u1ec7n c\u1ed1 \u0111\u1ecbnh \u0111\u01b0\u1ee3c gi\u1eef nguy\u00ean.",
+      "exact_repeat_rows": 140,
+      "input_rows": 24000,
+      "null_cells": 0,
+      "output_rows": 24000,
+      "primary_key": null,
+      "source_sha256": "9dfb2244ada1ceb81cb91a8a5840c3ae7d6b2ba45b88f6b25f80d82718a7a6b6"
+    }
+  }
+}

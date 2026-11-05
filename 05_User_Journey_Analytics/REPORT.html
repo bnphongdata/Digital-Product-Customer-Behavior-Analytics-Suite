@@ -1,0 +1,233 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hành trình người dùng theo trình tự &amp; Điểm nghẽn chuyển đổi</title><style>
+body{margin:0;background:#f1f5f9;color:#17283d;font:16px/1.6 system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:36px 24px}header{background:#102f47;color:white;padding:32px;border-radius:16px}h1{line-height:1.15;font-size:36px}h2{font-size:23px}section{background:white;padding:24px;margin:22px 0;border-radius:12px;border:1px solid #dce4ea}.tag{color:#8ee8d1;text-transform:uppercase;letter-spacing:.1em;font-size:13px}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:10px;text-align:right;border-bottom:1px solid #e2e8f0}th{background:#edf4f8}td:first-child,th:first-child{text-align:left}.scroll{overflow:auto}a{color:#075985}pre{overflow:auto;white-space:pre-wrap}.note{border-left:5px solid #b7791f}li{margin:10px 0}@media print{body{background:white}main{padding:0}section{break-inside:avoid}header{color:#102f47;background:white}}
+</style><main><header><div class="tag">Bùi Nhất Phong · Phân tích dữ liệu có đối soát (Reproducible analysis)</div><h1>Hành trình người dùng theo trình tự &amp; Điểm nghẽn chuyển đổi</h1><p>Có bao nhiêu người dùng hoàn thành phễu mua hàng theo đúng trình tự thời gian, và tỷ lệ chuyển đổi khác nhau thế nào giữa khách mới và khách quay lại?</p><p>Dữ liệu mô phỏng · Đối soát SQL + Python · 15 kiểm tra thành công</p></header><section><h2>Dữ liệu cho thấy điều gì</h2><p>Ghi nhận 627 người mua hàng trong tổng số 6,000 người dùng (10.45%). Không có người dùng nào đi trọn vẹn chuỗi 6 bước đúng theo trình tự ngày tháng trong dữ liệu gốc. Điểm này phản ánh vấn đề đồng bộ thời gian trong hệ thống tracking, chứ không phải không có ai mua hay 100% người dùng bỏ thanh toán.</p><svg viewBox="0 0 1000 366" role="img" aria-labelledby="chartTitle"><title id="chartTitle">Lượng tiếp cận giai đoạn chưa sắp xếp (người dùng)</title><text x="0" y="24" font-size="19" fill="#17283d">Lượng tiếp cận giai đoạn chưa sắp xếp (người dùng)</text><text x="0" y="64" font-size="14" fill="#17283d">Landing</text><rect x="290" y="46" width="520.000" height="26" rx="3" fill="#087f8c"/><text x="820.000" y="64" font-size="14" fill="#17283d">6,000</text><text x="0" y="107" font-size="14" fill="#17283d">Browse</text><rect x="290" y="89" width="376.653" height="26" rx="3" fill="#087f8c"/><text x="676.653" y="107" font-size="14" fill="#17283d">4,346</text><text x="0" y="150" font-size="14" fill="#17283d">Product View</text><rect x="290" y="132" width="253.327" height="26" rx="3" fill="#087f8c"/><text x="553.327" y="150" font-size="14" fill="#17283d">2,923</text><text x="0" y="193" font-size="14" fill="#17283d">Add to Cart</text><rect x="290" y="175" width="163.193" height="26" rx="3" fill="#087f8c"/><text x="463.193" y="193" font-size="14" fill="#17283d">1,883</text><text x="0" y="236" font-size="14" fill="#17283d">Checkout</text><rect x="290" y="218" width="101.747" height="26" rx="3" fill="#087f8c"/><text x="401.747" y="236" font-size="14" fill="#17283d">1,174</text><text x="0" y="279" font-size="14" fill="#17283d">Purchase</text><rect x="290" y="261" width="54.340" height="26" rx="3" fill="#087f8c"/><text x="354.340" y="279" font-size="14" fill="#17283d">627</text><text x="0" y="322" font-size="14" fill="#17283d">Signup</text><rect x="290" y="304" width="34.753" height="26" rx="3" fill="#087f8c"/><text x="334.753" y="322" font-size="14" fill="#17283d">401</text></svg></section><section><h2>Summary</h2><div class="scroll"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>users</th>
+      <th>purchasers</th>
+      <th>observed_purchase_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6000</td>
+      <td>627</td>
+      <td>0.1045</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="Results/summary.csv">Tải kết quả đầy đủ (CSV)</a></p></section><section><h2>Ordered Funnel</h2><div class="scroll"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>step</th>
+      <th>stage</th>
+      <th>users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Landing</td>
+      <td>6000</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Browse</td>
+      <td>2304</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Product View</td>
+      <td>590</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Add to Cart</td>
+      <td>102</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Checkout</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Purchase</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="Results/ordered_funnel.csv">Tải kết quả đầy đủ (CSV)</a></p></section><section><h2>Returning User Conversion</h2><div class="scroll"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>is_returning</th>
+      <th>users</th>
+      <th>purchasers</th>
+      <th>purchase_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>4346</td>
+      <td>359</td>
+      <td>0.0826</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1654</td>
+      <td>268</td>
+      <td>0.1620</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="Results/returning_user_conversion.csv">Tải kết quả đầy đủ (CSV)</a></p></section><section><h2>Time To Purchase</h2><div class="scroll"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>user_id</th>
+      <th>first_purchase_date</th>
+      <th>days_to_purchase</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>17</td>
+      <td>2025-06-15</td>
+      <td>2.0000</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>2025-08-25</td>
+      <td>2.0000</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>2025-07-27</td>
+      <td>9.0000</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>2025-11-23</td>
+      <td>3.0000</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>2025-04-24</td>
+      <td>7.0000</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>2025-12-10</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>74</td>
+      <td>2025-05-16</td>
+      <td>12.0000</td>
+    </tr>
+    <tr>
+      <td>86</td>
+      <td>2025-12-04</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>89</td>
+      <td>2025-03-29</td>
+      <td>1.0000</td>
+    </tr>
+    <tr>
+      <td>107</td>
+      <td>2025-05-28</td>
+      <td>12.0000</td>
+    </tr>
+    <tr>
+      <td>123</td>
+      <td>2025-05-29</td>
+      <td>12.0000</td>
+    </tr>
+    <tr>
+      <td>124</td>
+      <td>2025-05-08</td>
+      <td>3.0000</td>
+    </tr>
+    <tr>
+      <td>129</td>
+      <td>2025-11-07</td>
+      <td>4.0000</td>
+    </tr>
+    <tr>
+      <td>132</td>
+      <td>2025-04-11</td>
+      <td>10.0000</td>
+    </tr>
+    <tr>
+      <td>134</td>
+      <td>2025-07-07</td>
+      <td>7.0000</td>
+    </tr>
+    <tr>
+      <td>136</td>
+      <td>2025-11-06</td>
+      <td>9.0000</td>
+    </tr>
+    <tr>
+      <td>138</td>
+      <td>2025-10-31</td>
+      <td>10.0000</td>
+    </tr>
+    <tr>
+      <td>146</td>
+      <td>2025-06-20</td>
+      <td>13.0000</td>
+    </tr>
+    <tr>
+      <td>151</td>
+      <td>2025-05-21</td>
+      <td>3.0000</td>
+    </tr>
+    <tr>
+      <td>153</td>
+      <td>2025-07-18</td>
+      <td>10.0000</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="Results/time_to_purchase.csv">Tải kết quả đầy đủ (CSV)</a></p></section><section><h2>Stage Reach</h2><div class="scroll"><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>journey_stage</th>
+      <th>users</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Landing</td>
+      <td>6000</td>
+    </tr>
+    <tr>
+      <td>Browse</td>
+      <td>4346</td>
+    </tr>
+    <tr>
+      <td>Product View</td>
+      <td>2923</td>
+    </tr>
+    <tr>
+      <td>Add to Cart</td>
+      <td>1883</td>
+    </tr>
+    <tr>
+      <td>Checkout</td>
+      <td>1174</td>
+    </tr>
+    <tr>
+      <td>Purchase</td>
+      <td>627</td>
+    </tr>
+    <tr>
+      <td>Signup</td>
+      <td>401</td>
+    </tr>
+  </tbody>
+</table></div><p><a href="Results/stage_reach.csv">Tải kết quả đầy đủ (CSV)</a></p></section><section><h2>Kết quả thống kê và bổ sung</h2><pre>{
+  &quot;p50_days_to_purchase&quot;: 7.0,
+  &quot;p90_days_to_purchase&quot;: 12.0,
+  &quot;ordered_path_loss_after_checkout&quot;: 1.0,
+  &quot;signup_handling&quot;: &quot;B\u01b0\u1edbc \u0110\u0103ng k\u00fd \u0111\u01b0\u1ee3c b\u00e1o c\u00e1o \u0111\u1ed9c l\u1eadp; kh\u00f4ng b\u1eaft bu\u1ed9c ph\u1ea3i x\u1ea3y ra sau b\u01b0\u1edbc mua h\u00e0ng. S\u1ef1 s\u1ee5t gi\u1ea3m \u1edf ph\u1ec5u tu\u1ea7n t\u1ef1 l\u00e0 c\u00f4ng c\u1ee5 ch\u1ea9n \u0111o\u00e1n tracking, kh\u00f4ng ph\u1ea3i b\u1eb1ng ch\u1ee9ng kh\u00e1ch b\u1ecf thanh to\u00e1n.&quot;
+}</pre></section><section><h2>Đề xuất hành động tiếp theo</h2><p>So sánh tỷ lệ mua hàng tổng thể với phễu nghiêm ngặt theo trình tự thời gian để phát hiện lỗi theo dõi thiếu hoặc đảo lộn thứ tự. Tìm ra bước chuyển đổi có tỷ lệ rơi rụng lớn nhất trước khi đề xuất thử nghiệm giao diện mới.</p></section><section class="note"><h2>Giới hạn phân tích và giả định</h2><p>Ngày tháng trong dữ liệu chỉ có độ phân giải theo ngày; các bước cùng ngày không xác định được thứ tự chính xác trong ngày. Bước Đăng ký được tính độc lập với phễu mua sắm 6 bước. Các nhóm thuần tập có khoảng thời gian theo dõi khác nhau, nên tỷ lệ chuyển đổi và thời gian đến khi mua hàng chỉ mang tính mô tả.</p><ul><li><b>events_before_first_seen</b>: 0 dòng. Giữ lại trong nguồn; phễu tuần tự và thời gian đến lúc mua hàng đã loại bỏ chuỗi thời gian không hợp lệ.</li><li><b>users_with_adjacent_stage_date_inversions</b>: 3,296 dòng. Có ít nhất một bước sau diễn ra trước bước trước đó. Không coi sự sụt giảm phễu nghiêm ngặt là khách hàng bỏ cuộc; cần kiểm tra lại cơ chế ghi nhận thời gian.</li></ul></section><p>Được tạo từ các tệp CSV mô phỏng. Bảng tổng hợp Excel và dữ liệu Hyper đã được đối soát riêng. <a href="README.md">Xem báo cáo chi tiết (Case study)</a></p></main></html>

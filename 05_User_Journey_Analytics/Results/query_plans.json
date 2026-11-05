@@ -1,0 +1,918 @@
+{
+  "ordered_funnel": [
+    [
+      1,
+      0,
+      0,
+      "MERGE (UNION ALL)"
+    ],
+    [
+      3,
+      1,
+      0,
+      "LEFT"
+    ],
+    [
+      4,
+      3,
+      0,
+      "MERGE (UNION ALL)"
+    ],
+    [
+      6,
+      4,
+      0,
+      "LEFT"
+    ],
+    [
+      7,
+      6,
+      0,
+      "MERGE (UNION ALL)"
+    ],
+    [
+      9,
+      7,
+      0,
+      "LEFT"
+    ],
+    [
+      13,
+      9,
+      216,
+      "SCAN users_clean"
+    ],
+    [
+      18,
+      9,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      24,
+      18,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      55,
+      7,
+      0,
+      "RIGHT"
+    ],
+    [
+      59,
+      55,
+      216,
+      "SCAN users_clean"
+    ],
+    [
+      64,
+      55,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      70,
+      64,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      92,
+      55,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      98,
+      92,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      109,
+      92,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      115,
+      109,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      179,
+      4,
+      0,
+      "RIGHT"
+    ],
+    [
+      183,
+      179,
+      216,
+      "SCAN users_clean"
+    ],
+    [
+      188,
+      179,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      194,
+      188,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      216,
+      179,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      222,
+      216,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      233,
+      216,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      239,
+      233,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      270,
+      179,
+      0,
+      "CORRELATED SCALAR SUBQUERY 6"
+    ],
+    [
+      276,
+      270,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      287,
+      270,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      293,
+      287,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      304,
+      287,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      310,
+      304,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      383,
+      1,
+      0,
+      "RIGHT"
+    ],
+    [
+      384,
+      383,
+      0,
+      "MERGE (UNION ALL)"
+    ],
+    [
+      386,
+      384,
+      0,
+      "LEFT"
+    ],
+    [
+      387,
+      386,
+      0,
+      "MERGE (UNION ALL)"
+    ],
+    [
+      389,
+      387,
+      0,
+      "LEFT"
+    ],
+    [
+      393,
+      389,
+      216,
+      "SCAN users_clean"
+    ],
+    [
+      398,
+      389,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      404,
+      398,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      426,
+      389,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      432,
+      426,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      443,
+      426,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      449,
+      443,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      480,
+      389,
+      0,
+      "CORRELATED SCALAR SUBQUERY 6"
+    ],
+    [
+      486,
+      480,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      497,
+      480,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      503,
+      497,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      514,
+      497,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      520,
+      514,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      560,
+      389,
+      0,
+      "CORRELATED SCALAR SUBQUERY 8"
+    ],
+    [
+      566,
+      560,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      577,
+      560,
+      0,
+      "CORRELATED SCALAR SUBQUERY 6"
+    ],
+    [
+      583,
+      577,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      594,
+      577,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      600,
+      594,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      611,
+      594,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      617,
+      611,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      675,
+      387,
+      0,
+      "RIGHT"
+    ],
+    [
+      679,
+      675,
+      216,
+      "SCAN users_clean"
+    ],
+    [
+      684,
+      675,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      690,
+      684,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      712,
+      675,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      718,
+      712,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      729,
+      712,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      735,
+      729,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      766,
+      675,
+      0,
+      "CORRELATED SCALAR SUBQUERY 6"
+    ],
+    [
+      772,
+      766,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      783,
+      766,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      789,
+      783,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      800,
+      783,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      806,
+      800,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      846,
+      675,
+      0,
+      "CORRELATED SCALAR SUBQUERY 8"
+    ],
+    [
+      852,
+      846,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      863,
+      846,
+      0,
+      "CORRELATED SCALAR SUBQUERY 6"
+    ],
+    [
+      869,
+      863,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      880,
+      863,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      886,
+      880,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      897,
+      880,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      903,
+      897,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      952,
+      675,
+      0,
+      "CORRELATED SCALAR SUBQUERY 10"
+    ],
+    [
+      958,
+      952,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      969,
+      952,
+      0,
+      "CORRELATED SCALAR SUBQUERY 8"
+    ],
+    [
+      975,
+      969,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      986,
+      969,
+      0,
+      "CORRELATED SCALAR SUBQUERY 6"
+    ],
+    [
+      992,
+      986,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1003,
+      986,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      1009,
+      1003,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1020,
+      1003,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      1026,
+      1020,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1117,
+      384,
+      0,
+      "RIGHT"
+    ],
+    [
+      1121,
+      1117,
+      216,
+      "SCAN users_clean"
+    ],
+    [
+      1126,
+      1117,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      1132,
+      1126,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1154,
+      1117,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      1160,
+      1154,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1171,
+      1154,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      1177,
+      1171,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1208,
+      1117,
+      0,
+      "CORRELATED SCALAR SUBQUERY 6"
+    ],
+    [
+      1214,
+      1208,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1225,
+      1208,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      1231,
+      1225,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1242,
+      1225,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      1248,
+      1242,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1288,
+      1117,
+      0,
+      "CORRELATED SCALAR SUBQUERY 8"
+    ],
+    [
+      1294,
+      1288,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1305,
+      1288,
+      0,
+      "CORRELATED SCALAR SUBQUERY 6"
+    ],
+    [
+      1311,
+      1305,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1322,
+      1305,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      1328,
+      1322,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1339,
+      1322,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      1345,
+      1339,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1394,
+      1117,
+      0,
+      "CORRELATED SCALAR SUBQUERY 10"
+    ],
+    [
+      1400,
+      1394,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1411,
+      1394,
+      0,
+      "CORRELATED SCALAR SUBQUERY 8"
+    ],
+    [
+      1417,
+      1411,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1428,
+      1411,
+      0,
+      "CORRELATED SCALAR SUBQUERY 6"
+    ],
+    [
+      1434,
+      1428,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1445,
+      1428,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      1451,
+      1445,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1462,
+      1445,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      1468,
+      1462,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1526,
+      1117,
+      0,
+      "CORRELATED SCALAR SUBQUERY 12"
+    ],
+    [
+      1532,
+      1526,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1543,
+      1526,
+      0,
+      "CORRELATED SCALAR SUBQUERY 10"
+    ],
+    [
+      1549,
+      1543,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1560,
+      1543,
+      0,
+      "CORRELATED SCALAR SUBQUERY 8"
+    ],
+    [
+      1566,
+      1560,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1577,
+      1560,
+      0,
+      "CORRELATED SCALAR SUBQUERY 6"
+    ],
+    [
+      1583,
+      1577,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1594,
+      1577,
+      0,
+      "CORRELATED SCALAR SUBQUERY 4"
+    ],
+    [
+      1600,
+      1594,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ],
+    [
+      1611,
+      1594,
+      0,
+      "CORRELATED SCALAR SUBQUERY 2"
+    ],
+    [
+      1617,
+      1611,
+      61,
+      "SEARCH e USING INDEX ix_journey_events_user_id (user_id=?)"
+    ]
+  ],
+  "returning_user_conversion": [
+    [
+      3,
+      0,
+      0,
+      "MATERIALIZE p"
+    ],
+    [
+      8,
+      3,
+      223,
+      "SCAN journey_events_clean USING INDEX ix_journey_events_user_id"
+    ],
+    [
+      27,
+      0,
+      216,
+      "SCAN u"
+    ],
+    [
+      33,
+      0,
+      0,
+      "BLOOM FILTER ON p (user_id=?)"
+    ],
+    [
+      42,
+      0,
+      51,
+      "SEARCH p USING AUTOMATIC COVERING INDEX (user_id=?) LEFT-JOIN"
+    ],
+    [
+      51,
+      0,
+      0,
+      "USE TEMP B-TREE FOR GROUP BY"
+    ]
+  ],
+  "stage_reach": [
+    [
+      7,
+      0,
+      216,
+      "SCAN journey_events_clean"
+    ],
+    [
+      9,
+      0,
+      0,
+      "USE TEMP B-TREE FOR GROUP BY"
+    ],
+    [
+      48,
+      0,
+      0,
+      "USE TEMP B-TREE FOR count(DISTINCT)"
+    ],
+    [
+      51,
+      0,
+      0,
+      "USE TEMP B-TREE FOR ORDER BY"
+    ]
+  ],
+  "summary": [
+    [
+      3,
+      0,
+      208,
+      "SCAN users_clean USING COVERING INDEX ix_users_user_id"
+    ],
+    [
+      11,
+      0,
+      0,
+      "SCALAR SUBQUERY 1"
+    ],
+    [
+      19,
+      11,
+      223,
+      "SCAN journey_events_clean USING INDEX ix_journey_events_user_id"
+    ],
+    [
+      36,
+      0,
+      0,
+      "SCALAR SUBQUERY 2"
+    ],
+    [
+      44,
+      36,
+      223,
+      "SCAN journey_events_clean USING INDEX ix_journey_events_user_id"
+    ]
+  ],
+  "time_to_purchase": [
+    [
+      9,
+      0,
+      216,
+      "SCAN e"
+    ],
+    [
+      13,
+      0,
+      46,
+      "SEARCH u USING INDEX idx_users_user_id (user_id=?)"
+    ],
+    [
+      23,
+      0,
+      0,
+      "USE TEMP B-TREE FOR GROUP BY"
+    ]
+  ]
+}
